@@ -49,7 +49,7 @@
       
       $("#myButton").on("click", function(){
         $(this).prop("disabled", true);
-        $.when(countdown(5)).then(function() { 
+        $.when(countdown(0)).then(function() { 
           playSong("audio.mp3")
           .then(function() { $("#myButton").prop("disabled", false) });
         })
