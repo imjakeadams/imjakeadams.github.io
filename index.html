@@ -50,7 +50,7 @@
       $("#myButton").on("click", function(){
         $(this).prop("disabled", true);
         $.when(countdown(0)).then(function() { 
-          playSong("audio.mp3")
+          playSong("Ping.aiff")
           .then(function() { $("#myButton").prop("disabled", false) });
         })
       });
