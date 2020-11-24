@@ -51,7 +51,7 @@
         $(this).prop("disabled", true);
         $.when(countdown(0)).then(function() { 
           playSong("ding.mp3")
-          .then(function() { $("#myButton").prop("disabled", false) });
+          //.then(function() { $("#myButton").prop("disabled", false) });
         })
       });
     </script>
