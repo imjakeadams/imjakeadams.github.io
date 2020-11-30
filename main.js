@@ -33,7 +33,7 @@ function check(stat){
 }
 
 function count(){
-	if (seconds <= Number(secondsInput.value)) { // if(seconds > 0){
+	if (1) {//(seconds <= Number(secondsInput.value)) { // if(seconds > 0){
        if(toCount == true){
             seconds++; // seconds--;
             remseconds = seconds % 60;
