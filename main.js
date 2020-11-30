@@ -33,7 +33,7 @@ function check(stat){
 }
 
 function count(){
-	if (seconds < Number(secondsInput.value)) { // if(seconds > 0){
+	if (seconds <= Number(secondsInput.value)) { // if(seconds > 0){
        if(toCount == true){
             seconds++; // seconds--;
             remseconds = seconds % 60;
@@ -47,7 +47,7 @@ function count(){
        	        minuts = "0" + minuts;
             }
 
-            counter.innerHTML = minuts + " : " + remseconds;
+            counter.innerHTML = (minuts) + " : " + (Number(secondsInput.value) - remseconds);
        }
 	}
 	else{
