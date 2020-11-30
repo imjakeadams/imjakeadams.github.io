@@ -33,9 +33,9 @@ function check(stat){
 }
 
 function count(){
-	if (1) {//(seconds <= Number(secondsInput.value)) { // if(seconds > 0){
+	if(seconds > 0){
        if(toCount == true){
-            seconds++; // seconds--;
+            seconds--;
             remseconds = seconds % 60;
             minuts = Math.floor(seconds / 60);
 
@@ -47,7 +47,7 @@ function count(){
        	        minuts = "0" + minuts;
             }
 
-            counter.innerHTML = (minuts) + " : " + (Number(secondsInput.value) - remseconds);
+            counter.innerHTML = minuts + " : " + remseconds;
        }
 	}
 	else{
@@ -57,8 +57,8 @@ function count(){
 }
 
 function counting(){
-	remseconds = Number(secondsInput.value) - (seconds % 60);
-minuts = Number(secondsInput.value) - Math.floor(seconds / 60);
+	remseconds = seconds % 60;
+minuts = Math.floor(seconds / 60);
 
 if(remseconds < 10){
     remseconds = "0" + remseconds;
@@ -71,3 +71,4 @@ if(minuts < 10){
 counter.innerHTML = minuts + " : " + remseconds;
    setInterval(count, 1000);
 }
+
