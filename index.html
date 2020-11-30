@@ -13,23 +13,12 @@
     	<div class="counter"></div>
     	<input id="seconds" type="number" placeholder="Seconds...">
     	<div class="buttons">
-    		<button class="btn start" id="start" value="1" onclick="check(this); playSong('ding.mp3')">Start</button>
+    		<button class="btn start" id="start" value="1" onclick="check(this)">Start</button>
     		<button class="btn start" id="continue" value="1" onclick="check(this)">Continue</button>
     		<button class="btn stop" id="stop" value="0" onclick="check(this)">Stop</button>
     		<button class="btn start" id="submit" onclick="subm()">Submit</button>
     	</div>
     <script type="text/javascript" src="main.js"></script>
-
-    <script>
-        
-        function playSong(src){
-          var audioElement = document.createElement('audio');
-          audioElement.setAttribute('src', src);
-          audioElement.setAttribute('autoplay', 'autoplay');
-          audioElement.play();
-          audioElement.pause();
-        }
-                
-      </script>
+    
 </body>
 </html>

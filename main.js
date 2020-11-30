@@ -1,11 +1,16 @@
 const counter = document.querySelector('.counter');
 const btn = document.querySelector('.buttons');
 const secondsInput = document.getElementById('seconds');
+const soundEffect = new Audio();
 
 var seconds;
 var minuts;
 var remseconds;
 var toCount;
+
+$("#start").on("click", function(){
+    soundEffect.play();
+    })
 
 function subm(){
     display("submit", "start");
@@ -52,7 +57,9 @@ function count(){
 	}
 	else{
 		counter.innerHTML = "Done!";
-		btn.style.opacity = '0';
+        btn.style.opacity = '0';
+        soundEffect.src = 'ding.mp3';
+        soundEffect.play();   
 	}
 }
 
