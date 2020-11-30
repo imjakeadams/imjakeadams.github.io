@@ -57,8 +57,8 @@ function count(){
 }
 
 function counting(){
-	remseconds = seconds % 60;
-minuts = Math.floor(seconds / 60);
+	remseconds = Number(secondsInput.value) - (seconds % 60);
+minuts = Number(secondsInput.value) - Math.floor(seconds / 60);
 
 if(remseconds < 10){
     remseconds = "0" + remseconds;
