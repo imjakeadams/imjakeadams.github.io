@@ -33,9 +33,9 @@ function check(stat){
 }
 
 function count(){
-	if(seconds > 0){
+	if (seconds < Number(secondsInput.value)) { // if(seconds > 0){
        if(toCount == true){
-            seconds--;
+            seconds++; // seconds--;
             remseconds = seconds % 60;
             minuts = Math.floor(seconds / 60);
 
